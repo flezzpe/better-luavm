@@ -8,8 +8,42 @@ Example:
 --// loader takes only 1 line of your code and should always go above the provided functions
 --// get loader from: https://github.com/flezzpe/better-luavm/blob/main/loader.lua
 
---// [loader here]
-printl(gethwid())
+--// [loader.lua]
+
+create_folder('Example') --// make folder in Matcha folder
+```
+
+Simple whitelist system:
+```lua
+--// [loader.lua]
+
+local userhwid = gethwid()
+
+local hwids = {
+	'5VF41D0Y6CCW-DW',
+	'FSICZHUJENV1-BW',
+	'DIK82ZJGF81-DZ'
+}
+
+local is_whitelisted = false
+
+for index = 1, #hwids do
+	hwid = hwids[index]
+
+	if hwid == userhwid then
+		is_whitelisted = true
+	end
+end
+
+if not is_whitelisted then
+	setclipboard(userhwid)
+	printl('Not whitelisted! - hwid copied in clipboard.')
+	
+
+	return
+end
+
+printl('Whitelisted!')
 ```
 
 Functions:
