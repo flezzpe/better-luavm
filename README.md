@@ -45,3 +45,8 @@ isfolder(folder_path <string>)
 ```lua
 readfile(file_path <string>) --// return <string> file data
 ```
+
+# Create Message (Draw message in Matcha output)
+```lua
+create_message(message <string>) --// Example output: [Better Lua Virtual Machine v0.1.4] - hello world! 
+```
