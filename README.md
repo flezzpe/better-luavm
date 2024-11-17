@@ -1,5 +1,3 @@
-## Better Lua Virtual Machine will be ready very soon.
-
 # better-luavm is a script for matcha that complements the usual luavm documentation and adds many things
 better-luavm is still under development and needs a lot of new features and ideas, right now it is just a tesot product to develop luavm in matcha
 
