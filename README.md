@@ -3,16 +3,16 @@ better-luavm is still under development and needs a lot of new features and idea
 
 
 Example:
+
 ```lua
-luavm:__init__()
+--// loader takes only 1 line of your code and should always go above the provided functions
+--// get loader from: https://github.com/flezzpe/better-luavm/blob/main/loader.lua
+
+--// [loader here]
 printl(gethwid())
 ```
 
 Functions:
-# Init
-```lua
-luavm:__init__(in_debug <boolean>)
-```
 
 # Create Folder
 ```lua
