@@ -2,7 +2,7 @@
 better-luavm is still under development and needs a lot of new features and ideas, right now it is just a tesot product to develop luavm in matcha
 
 
-Example:
+Examples:
 
 ```lua
 --// loader takes only 1 line of your code and should always go above the provided functions
@@ -78,7 +78,82 @@ isfolder(folder_path <string>)
 readfile(file_path <string>) --// return <string> file data
 ```
 
-# Create Message (Draw message in Matcha output)
+# Vector3
 ```lua
-create_message(message <string>) --// Example output: [Better Lua Virtual Machine v0.1.4] - hello world! 
+Vector3.new(X <number>, Y <number>, Z <number>)
+```
+Example
+```lua
+printl(Vector3.new(0, 15, 0).Y) --// Output: 15
+```
+
+# Vector3 Get Vectors
+return last vector3 value
+```lua
+Vector3:get_vectors()
+```
+Example
+```lua
+Vector3:new(15, 23, 0)
+
+printl(Vector3:get_vectors()) --// Output: 15, 23, 0, but in Matcha [unknown type] [unknown type] [unknown type]
+```
+
+# Vector3 Zero
+```lua
+Vector3:zero()
+```
+Example
+```lua
+printl(Vector3:zero()) --// Output: 0, 0, 0
+```
+
+# Vector3 One
+```lua
+Vector3:one()
+```
+Example
+```lua
+printl(Vector3:one()) --// Output: 1, 1, 1
+```
+
+# Shutdown
+```lua
+shutdown()
+```
+Example
+```lua
+shutdown() --// Shuts down Roblox
+```
+
+# Get Bytes
+```lua
+get_bytes(data <string>)
+```
+Example
+```lua
+printl(get_bytes('hello world!')) --// Output: \104\101\108\108\111\32\119\111\114\108\100\33
+printl('\104\101\108\108\111\32\119\111\114\108\100\33') --// Output: hello world!
+```
+
+# Base64 Encode
+```lua
+base64_encode(input <string>)
+```
+Example
+```lua
+local encoded = base64_encode('hello world!')
+
+printl(encoded) --// Output: aGVsbG8gd29ybGQh
+```
+
+# Base64 Decode
+```lua
+base64_decode(input <string>)
+```
+Example
+```lua
+local decoded = base64_decode('aGVsbG8gd29ybGQh')
+
+printl(decoded) --// Output: hello world!
 ```
